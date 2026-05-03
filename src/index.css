@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #F7FBFE;
+  --white: #ffffff;
+  --blue-deep: #1A6FA8;
+  --blue-mid: #2E9CCA;
+  --blue-light: #A8D8EA;
+  --blue-pale: #E8F4FD;
+  --teal: #3BBFB2;
+  --text-primary: #0F2744;
+  --text-secondary: #4A6480;
+  --text-muted: #8AA0B4;
+  --border: #D8E8F2;
+  --font: 'DM Sans', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+#root { width: 100%; }
+
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-mid);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  white-space: pre-line;
+}
+
+.section-sub {
+  font-size: 17px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.section-header { margin-bottom: 56px; }
+
+.btn-primary {
+  background: var(--blue-deep);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 12px;
+  border: none;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(26,111,168,0.3);
+}
+.btn-primary:hover {
+  background: #135A8C;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(26,111,168,0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--blue-deep);
+  padding: 14px 32px;
+  border-radius: 12px;
+  border: 1.5px solid var(--blue-light);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.btn-secondary:hover {
+  background: var(--blue-pale);
+  border-color: var(--blue-deep);
+}
+
+.wave { display: block; line-height: 0; }
+.wave svg { display: block; width: 100%; }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
