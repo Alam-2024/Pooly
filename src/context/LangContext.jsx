@@ -1,10 +1,10 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from "react";
 
 const LangContext = createContext();
 
 export function LangProvider({ children }) {
-  const [lang, setLang] = useState('en');
-  const toggle = () => setLang(l => l === 'en' ? 'es' : 'en');
+  const [lang, setLang] = useState("en");
+  const toggle = () => setLang((l) => (l === "en" ? "es" : "en"));
   return (
     <LangContext.Provider value={{ lang, toggle }}>
       {children}
